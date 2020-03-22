@@ -13,22 +13,30 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name = "clientes")
+@ApiModel("Cliente")
 public class Cliente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idCliente;
+	@ApiModelProperty(value = "Nombres de cliente",required = true)
 	@NotBlank(message = "Nombre es un caracter necesario")
 	@Column(name = "nombres", length = 50, nullable = false)
 	private String nombres;
+	@ApiModelProperty(value = "Apellidos de cliente",required = true)
 	@NotBlank(message = "Apellido es un caracter necesario")
 	@Column(name = "apellidos", length = 50, nullable = false)
 	private String apellidos;
+	@ApiModelProperty(value = "Edad de cliente",required = true)
 	@Column(name = "edad")
 	@NotNull
 	private Integer edad;
+	@ApiModelProperty(value = "Fecha de nacimiento de cliente",required = true)
 	@NotNull
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	@Column(name = "fecha_nacimiento", length = 50, nullable = false)

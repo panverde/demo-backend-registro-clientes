@@ -16,6 +16,12 @@ import com.inter.dto.response.KpiClientes;
 import com.inter.model.Cliente;
 import com.inter.service.IClienteService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
+@Api(value = "ClienteController", description = "API demo clientes")
 @RestController
 @RequestMapping("/v1")
 public class ClienteController {
@@ -23,16 +29,20 @@ public class ClienteController {
 	@Autowired
 	private IClienteService service;
 
+	//@ApiResponses(value = {@ApiResponse(code = 200, message = "Suceess|OK")})
+	@ApiOperation(value = "crear nuevo cliente")
 	@PostMapping(value = "/creacliente")
 	public void createCliente(@RequestBody @Valid Cliente cliente) {
 		service.create(cliente);
 	}
 	
+	@ApiOperation(value = "consultar kpi de clientes", response = KpiClientes.class )
 	@GetMapping(value = "/kpideclientes")
 	public KpiClientes kpiClientes() {
 		return service.kpiClientes();
 	}
 	
+	@ApiOperation(value = "consultar lista de clientes", response = ClientesResponse.class)
 	@GetMapping(value = "/listclientes")
 	public List<ClientesResponse> listarClientes() {
 		return service.listarClientes();

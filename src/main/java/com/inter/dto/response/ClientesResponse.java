@@ -4,15 +4,22 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel("ClientesResponse")
 public class ClientesResponse {
 	
+	@ApiModelProperty(value = "Nombres de cliente",required = true)
 	private String nombres;
-
+	@ApiModelProperty(value = "Apellidos de cliente",required = true)
 	private String apellidos;
-
+	@ApiModelProperty(value = "Edad de cliente",required = true)
 	private Integer edad;
+	@ApiModelProperty(value = "Fecha de nacimiento de cliente",required = true)
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date fecha_nacimiento;
+	@ApiModelProperty(value = "Fecha posible muerte de cliente",required = true)
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date fecha_defuncion;
 

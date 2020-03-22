@@ -1,8 +1,14 @@
 package com.inter.dto.response;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel("KpiClientes")
 public class KpiClientes {
 	
+	@ApiModelProperty(value = "Promedio de edades de clientes",required = true)
 	private Double promedio;
+	@ApiModelProperty(value = "Desviacion estandar de edades de clientes",required = true)
 	private Double desviacion;
 	
 
