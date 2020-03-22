@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar  target/demo-backend-registro-0.0.1-SNAPSHOT.jar
