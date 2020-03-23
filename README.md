@@ -5,7 +5,8 @@ Para el calculo de posible fecha de defuncion se tomo la edad promedio sacada de
 
 Consulta de clientes,edad promedio,desviacion estandar - Jpa,swagger,bean validation
 
-Desplegado en AWS usando el servicio de Elastic Beanstalk - BD Postgresql
+Desplegado en AWS usando el servicio de Elastic Beanstalk - Postgresql RDS
+
 Desplegado en Heroku para su uso como segunda opcion.
 
 AWS endpoints
