@@ -9,13 +9,19 @@ Desplegado en AWS usando el servicio de Elastic Beanstalk - BD Postgresql
 Desplegado en Heroku para su uso como segunda opcion.
 
 AWS endpoints
+
 POST: http://joaquin-registro-rest.us-east-2.elasticbeanstalk.com:8080/v1/creacliente
+
 GET: http://joaquin-registro-rest.us-east-2.elasticbeanstalk.com:8080/v1/listclientes
+
 GET: http://joaquin-registro-rest.us-east-2.elasticbeanstalk.com:8080/v1/kpideclientes
 
 Heroku
+
 GET: https://demo-backend-registro.herokuapp.com/v1/listclientes
+
 GET: https://demo-backend-registro.herokuapp.com/v1/kpideclientes
+
 POST: https://demo-backend-registro.herokuapp.com/v1/creacliente
 
 autor - Joaquin Huauya
