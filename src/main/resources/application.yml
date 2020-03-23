@@ -1,14 +1,14 @@
-spring:
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-  datasource:
-    driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost/cliente
-    username: postgres
-    password: root
+#spring:
+  #jpa:
+   # database: POSTGRESQL
+    #show-sql: true
+    #hibernate:
+     # ddl-auto: update
+  #datasource:
+   # driverClassName: org.postgresql.Driver
+   # url: jdbc:postgresql://database-1.cjsfmvaumz6k.us-east-2.rds.amazonaws.com/db_cliente
+   # username: ${BD_USER}
+    #password: ${BD_PASSWORD}
 
-server:
-   port: 8080
+#server:
+  # port: 8080
