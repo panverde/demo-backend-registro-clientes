@@ -64,7 +64,6 @@ public class IClienteServiceImpl implements IClienteService {
 	public List<ClientesResponse> listarClientes() {
 		
 		int edad_esperanza = 76;
-		//int años_vida = 0;
 		Date fecha_muerte;
 		
 		List<Cliente> lisClientes = repository.findAll();

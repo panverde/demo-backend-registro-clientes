@@ -18,8 +18,6 @@ import com.inter.service.IClienteService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 
 @Api(value = "ClienteController", description = "API demo clientes")
 @RestController
@@ -29,7 +27,6 @@ public class ClienteController {
 	@Autowired
 	private IClienteService service;
 
-	//@ApiResponses(value = {@ApiResponse(code = 200, message = "Suceess|OK")})
 	@ApiOperation(value = "crear nuevo cliente")
 	@PostMapping(value = "/creacliente")
 	public void createCliente(@RequestBody @Valid Cliente cliente) {
